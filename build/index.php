@@ -1,6 +1,7 @@
 <head>
 <meta charset="UTF-8">
 <title>R*3*G</title>
+<link rel="stylesheet" charset="UTF-8" href="https://css.1ink.us/b3hd16.css"/>
 </head>
 <body style="background-color:brown;">
 <input type="checkbox" id="di" hidden/>
