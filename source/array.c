@@ -32,6 +32,8 @@ ctx.clearRect(tx, 300, tx, 100);
 ctx.fillStyle='rgb(122,'+c+',44)';
 ctx.fillRect(io, tx, tx, 100);
 ctx.clearRect(io, 300, 222, 100);
+canvas.style.top=Math.floor((hhh*.2222)+(Math.random(25)));
+document.getElementById('disp').style.left=Math.floor((www*.2222)-(Math.random(25)));
 document.getElementById('disp').innerHTML=tx;
 },8);
 }};
