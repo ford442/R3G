@@ -32,7 +32,7 @@ ctx.fillRect(tx, io, 222, 100);
 ctx.fillStyle='rgb(122,'+rgb2+',44)';
 ctx.fillRect(io, tx, tx, 100);
 document.getElementById('disp').innerHTML=tx;
-},16);
+},8);
 }};
 ctx.clearRect(0, 0, 700, 700);
 },1000);
