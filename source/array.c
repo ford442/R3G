@@ -2,6 +2,8 @@
 #include<stdlib.h>
 #include<emscripten.h>
 EM_JS(void,ma,(),{
+let W=new WebAssembly.Memory({initial:1});
+let wasmbuff=new Uint8ClampedArray(W.buffer,0,8);
 let r3g=Module.cwrap('r3g','number',['number','array','number']);
 let derp=[];
 let derp2=[];
@@ -10,14 +12,18 @@ let www=window.innerWidth;
 var i,tstr,tsti,c;
 var canvas=document.getElementById('rcanvas');
 var ctx = canvas.getContext('2d');
+let rgb1;
 setInterval(function(){
 for(c=0;c<120;c++){
-var rgb2;
+rgb1=Math.floor(Math.random(255));
 for(i=0;i<8;i++){
+rgb2=Math.random(255);
 setTimeout(function(){
 tstr=i*10;
 tsti=i*60;
 derp=[tsti,tstr,tsti,tstr,tsti,tstr,tsti,tstr];
+let encoded=new Uint8ClampedArray(derp);
+wasmbuff.set(encoded,0);
 derp2=[5,5,777,22,22,2,2,0];
 var llm=Math.random(111);
 llm=llm*10000;
@@ -26,17 +32,15 @@ llm=Math.floor(llm);
 llmm=Math.floor(llmm);
 llm=llm/10000;
 llmv=[llm,llmm];
-var tx=r3g(i,derp,llmv);
+var tx=r3g(i,W.buffer,llmv);
 var tx3=r3g(i,derp2,llmv);
 const io=300+c;
-const rgb1=Math.floor(Math.random(255));
 ctx.fillStyle="rgb("+rgb1+",77,44)";
 ctx.fillRect(tx, 300, 222, 100);
-rgb2=Math.random(255);
 ctx.fillStyle="rgb("+rgb2+",77,44)";
 ctx.fillRect(tx, 275, 222, 100);
 ctx.clearRect(tx, 300, tx, 100);
-ctx.fillStyle="rgb(122,"+(derp[4])+",44)";
+ctx.fillStyle="rgb(122,"+tx+",44)";
 ctx.fillRect(0, tx, tx, 100);
 ctx.clearRect(25, tx, 66, 25);
 canvas.style.top=Math.floor((hhh*.22)+(Math.random(333)));
