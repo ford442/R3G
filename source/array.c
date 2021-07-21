@@ -29,7 +29,7 @@ const rgb1=Math.floor(Math.random(255));
 ctx.fillStyle="rgb("+rgb1+",77,44)";
 ctx.fillRect(tx, 300, 222, 100);
 ctx.clearRect(tx, 300, tx, 100);
-canvas.style.top=Math.floor((hhh*.2222)+(Math.random(333)));
+canvas.style.top=Math.floor((hhh*.22)+(Math.random(333)));
 ctx.fillStyle='rgb(122,'+c+',44)';
 ctx.fillRect(0, tx, tx, 100);
 ctx.clearRect(0, 300, 222, 100);
