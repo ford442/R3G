@@ -9,7 +9,7 @@ var canvas=document.getElementById('rcanvas');
 var ctx = canvas.getContext('2d');
 setInterval(function(){
 document.getElementById('disp').innerHTML="";
-for(i=0;i<8;i++){
+for(i=1;i<8;i++){
 setInterval(function(){
 var tstr=i*10;
 var tsti=i*60;
@@ -27,7 +27,8 @@ ctx.fillRect(100, (tx*100), tx, 100);
 });
 int r3g(uint rr,register uint ara[8]){
 int ll=ara[rr]+(rr*10);
-return ll;
+ata[rr]=ll;
+return ara[rr];
 }
 int main()
 {
