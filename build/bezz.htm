@@ -1,104 +1,14 @@
-<head><meta charset="utf-8"/><title>circle marquee</title><style>::-webkit-scrollbar{display:none;}</style></head>
+<head>
+<meta charset="utf-8"/>
+<title>Circular Bezel</title>
+<style>
+::-webkit-scrollbar{display:none;}
+</style>
+</head>
 <body style="z-index:550;margin:0px">
-<img src="https://img.1ink.us/glass.png" hidden id="gl" alt="Glass"/><canvas id="circle" width="" height=""><img src="https://img.1ink.us/bezel.jpg" id="frm" alt="Frame"/></canvas><canvas id="tcan" hidden></canvas>
-<div id="lens">1</div>
-<script>
-document.addEventListener('keyup',(event)=>{
-if(event.key=='['){parent.document.getElementById("shut").innerHTML=1;draw();}
-if(event.key==']'){parent.document.getElementById("shut").innerHTML=2;draw();}});
-function draw(){
-var rec,ccanvas,mw,tcanv,imgwid,img,hi,sht,lens;
-ccanvas=document.getElementById('circle');
-tcanv=document.getElementById("tcan");
-hi=parent.document.getElementById("ihig").innerHTML;
-rec=parent.window.innerWidth;
-rec=Math.round(rec);
-document.getElementById('circle').width=rec;
-document.getElementById('circle').height=hi;
-imgb=document.getElementById("gl");
-var glas=Math.round(hi*1.133);
-imgb.height=glas;
-imgb.width=glas;
-var ctx=ccanvas.getContext('2d');
-var tctx=tcanv.getContext('2d');
-let rr=hi/2;
-rr=Math.round(rr);
-mw=((rec-hi)/2)+rr;
-mw=Math.round(mw);
-tcanv.height=hi;
-img=document.getElementById("frm");
-var imgb=document.getElementById("gl");
-var middle=(rec-glas)/2;
-var gtop=Math.round((imgb.height-hi)/2)
-middle=Math.round(middle);
-imgb.style.cssText=("position:absolute;left:"+middle+"px;right:"+middle+"px;z-index:555;top:-"+gtop+"px;");
-var nw=img.naturalWidth;
-var nh=img.naturalHeight;
-imgwid=(hi/nh)*nw;
-imgwid=Math.round(imgwid);
-var ndiff=(imgwid-rec)/2;
-ndiff=(ndiff*(nh/hi));
-tcanv.width=rec;
-sht=parent.document.getElementById("shut").innerHTML;
-lens=document.getElementById("lens").innerHTML;
-function shutter(sim){
-ctx.beginPath();
-ctx.arc(mw,rr,sim,0,2*Math.PI,false);
-ctx.fill();}
-if(ccanvas.getContext){
-tcanv.style.cssText="image-rendering:crisp-edges";
-ccanvas.style.cssText="image-rendering:crisp-edges";
-tctx.imageSmoothingEnabled=false;
-ctx.imageSmoothingEnabled=false;
-ctx.globalCompositeOperation='source-over';
-tctx.drawImage(img,ndiff,0,nw-(Math.round(nw*0.02)),nh-Math.round((nh*0.02)),0,0,imgwid,hi);
-ctx.beginPath();
-ctx.fillStyle="black";
-ctx.fillRect(0,0,rec,parent.window.innerHeight);
-ctx.fillStyle=ctx.createPattern(tcanv,'no-repeat');
-ctx.beginPath();
-ctx.fillRect(0,0,rec,hi);
-ctx.globalCompositeOperation='destination-out';
-shutter(rr);
-ctx.globalCompositeOperation='source-over';
-ctx.fillStyle="rgba(168,168,168,1)";
-shutter(rr);
-if(sht!=1){
-if(lens!=2){
-function op(sizz){
-ctx.globalCompositeOperation='source-over';
-ctx.fillStyle="rgba(168,168,168,1)";
-shutter(rr);
-ctx.globalCompositeOperation='destination-out';
-shutter(sizz);}
-for(let sizz=0;sizz<rr;sizz=sizz+1){
-setTimeout(function(){
-op(sizz);},2);}
-document.getElementById('lens').innerHTML="2";
-document.getElementById('gl').hidden=true;}
-ctx.globalCompositeOperation='destination-out';
-shutter(rr);}
-if(sht!=2){
-if(lens!=1){
-function clo(sizz){
-ctx.globalCompositeOperation='source-over';
-ctx.fillStyle="rgba(168,168,168,0.3)";
-shutter(rr-2);ctx.fillStyle="rgba(168,168,168,0.1)";
-shutter(rr-1);ctx.fillStyle="rgba(168,168,168,0.3)";
-shutter(rr);ctx.fillStyle="rgba(255,255,255,0.4)";
-shutter(rr+1);shutter(rr);ctx.fillStyle="rgba(0,0,0,0.4)";
-shutter(rr+2);}
-for(let sizz=0;sizz<rr;sizz=sizz+1){
-setTimeout(function(){
-clo(sizz);
-},2);}
-document.getElementById('lens').innerHTML="1";
-document.getElementById('gl').hidden=false;}
-ctx.globalCompositeOperation='source-over';
-ctx.fillStyle="rgba(168,168,168,1)";
-shutter(0);}}}
-draw();
-parent.document.getElementById('di').addEventListener('click',function(){
-draw();});
-</script>
+<img src="https://img.1ink.us/glass.png" id="gl" alt="Glass"/><canvas id="circle"><img src="https://img.1ink.us/bezel.jpg" id="frm" hidden alt="Frame"/>
+<canvas id="tcan" hidden></canvas>
+</canvas>
+<div id="lns">1</div>
+<script charset="utf-8" src="./bez.js"></script>
 </body>
