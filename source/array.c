@@ -6,14 +6,14 @@ let display=document.getElementById('disp').innerHTML;
 let r3g=Module.cwrap('r3g','number',['number','array']);
 setInterval(function(){
 let derp=[];
-let blank=0;
 derp = [0,1,2,3,4,5,6,7];
 for (blank<8;blank++;){
-display=r3g(blank,derp);
+display=r3g(derp);
+derp[0]=blank-1;
 }},1);
 });
-int r3g(int blnk,register char ara[8]){
-return ara[blnk];
+int r3g(register char ara[8]){
+return ara[ara[0]];
 }
 int main()
 {
