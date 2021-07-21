@@ -16,8 +16,7 @@ ctx.fillStyle='rgb(255,255,33)';
 ctx.fillRect(100, 200, 222, 100);
 ctx.fillStyle='rgb('+tx+',255,33)';
 ctx.fillRect(100, 200, tx, 100);
-};},5);           
-},100);
+};,5);};};,100);
 });
 int r3g(int ll, register char ara[8]){
 return ara[ll];
