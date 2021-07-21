@@ -8,8 +8,6 @@ let hhh=window.innerHeight;
 let www=window.innerWidth;
 let i,tstr,tsti,c;
 let canvas=document.getElementById('rcanvas');
-let ds=document.getElementById('disp');
-  
 let ctx = canvas.getContext('2d');
 setInterval(function(){
 for(c=0;c<120;c++){
@@ -31,11 +29,11 @@ const rgb1=Math.floor(Math.random(255));
 ctx.fillStyle="rgb("+rgb1+",77,44)";
 ctx.fillRect(tx, 300, 222, 100);
 ctx.clearRect(tx, 300, tx, 100);
+canvas.style.top=Math.floor((hhh*.2222)+(Math.random(700)));
 ctx.fillStyle='rgb(122,'+c+',44)';
 ctx.fillRect(io, tx, tx, 100);
 ctx.clearRect(io, 300, 222, 100);
-ds.style.top=Math.floor((hhh*.2222)+(Math.random(700)));
-ds.style.left=300+Math.floor((www*.55)+(Math.random(250)));
+canvas.style.left=300+Math.floor((www*.55)+(Math.random(250)));
 document.getElementById('disp').innerHTML=tx;
 },8);
 }};
