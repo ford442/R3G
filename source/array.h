@@ -4,5 +4,3 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<emscripten.h>
-
-register int words[8] ;
