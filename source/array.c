@@ -25,6 +25,8 @@ tx=r3g(i,derp,llmv);
 ctx.fillStyle='rgb('+(Math.floor(Math.random(100)*255))+',77,33)';
 ctx.fillRect(tx, 200, 222, 100);
 ctx.fillRect(100, tx, tx, 100);
+document.getElementById('disp').style.top=Math.floor(hhh+(Math.floor(Math.random(25)));
+document.getElementById('disp').style.left=Math.floor(www-(Math.floor(Math.random(25)));
 document.getElementById('disp').innerHTML=tx;
 },16);
 }};
