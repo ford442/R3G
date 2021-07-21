@@ -1,5 +1,6 @@
 
 #include "array.h"
+register int words[8] ;
 
 EM_JS(void,ma,(),
 {
