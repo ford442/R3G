@@ -2,8 +2,8 @@
 #include<stdlib.h>
 #include<emscripten.h>
 EM_JS(void,ma,(),{
-let W=new WebAssembly.Memory({initial:3});
-let wasmbuff=new Uint8Array(W.buffer,0,8);
+// let W=new WebAssembly.Memory({initial:3});
+// let wasmbuff=new Uint8Array(W.buffer,0,8);
 let r3g=Module.cwrap('r3g','number',['number','array','number']);
 let derp=[1,1,1,1,1,1,1,1];
 let derp2=[5,5,777,22,22,2,2,0];
@@ -22,7 +22,7 @@ setTimeout(function(){
 tstr=i*10;
 tsti=i*60;
 derp=[tsti,tstr,tsti,tstr,tsti,tstr,tsti,tstr];
-wasmbuff.set(new Uint8ClampedArray(derp),0);
+// wasmbuff.set(new Uint8ClampedArray(derp),0);
 var llm=Math.random(111);
 llm=llm*10000;
 llmm=llm/2;
@@ -30,7 +30,7 @@ llm=Math.floor(llm);
 llmm=Math.floor(llmm);
 llm=llm/10000;
 llmv=[llm,llmm];
-var tx=r3g(i,W.buffer,llmv);
+var tx=r3g(i,derp,llmv);
 var tx3=r3g(i,derp2,llmv);
 const io=300+c;
 ctx.fillStyle="rgb("+rgb1+",77,44)";
