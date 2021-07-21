@@ -5,12 +5,15 @@ EM_JS(void,ma,(),{
 let r3g=Module.cwrap('r3g','number',['number','array']);
 let derp=[];
 let i,tx;
+let canvas=document.getElementById('rcanvas');
+let ctx = canvas.getContext('2d');
+ctx.fillStyle=rgba(0,69,255,1);
 setInterval(function(){
 derp=[0,1,2,3,4,5,6,7];
 for(i=0;i<8;i++){
-derp[1]=i+100;
+derp[1]=(i*10)+100;
 tx=r3g(derp);
-document.getElementById('disp').innerHTML=tx;
+ctx.fillRect(100, r3g(derp), 150, 100);
 }},1);
 });
 int r3g(register char ara[8]){
