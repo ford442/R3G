@@ -6,7 +6,7 @@ let r3g=Module.cwrap('r3g','number',['number','array','number']);
 let derp=[];
 let hhh=window.innerHeight;
 let www=window.innerWidth;
-let i,tx,tstr,tsti,c;
+let i,tx,tstr,tsti,c,io,rgb1,rgb2;
 let canvas=document.getElementById('rcanvas');
 let ctx = canvas.getContext('2d');
 setInterval(function(){
@@ -15,7 +15,7 @@ for(i=0;i<8;i++){
 setTimeout(function(){
 tstr=i*10;
 tsti=i*60;
-derp=[tsti,tstr,tsti,tstr,tsti,tstr,tsti,tstr,io,rgb1,rgb2];
+derp=[tsti,tstr,tsti,tstr,tsti,tstr,tsti,tstr];
 var llm=Math.random(111);
 llm=llm*10000;
 llmm=llm/2;
