@@ -12,6 +12,7 @@ var canvas=document.getElementById('rcanvas');
 var ctx = canvas.getContext('2d');
 setInterval(function(){
 for(c=0;c<120;c++){
+var rgb2;
 for(i=0;i<8;i++){
 setTimeout(function(){
 tstr=i*10;
@@ -28,14 +29,10 @@ llmv=[llm,llmm];
 var tx=r3g(i,derp,llmv);
 var tx3=r3g(i,derp2,llmv);
 const io=300+c;
-var rgb1=function(){
-Math.floor(Math.random(255));
-};
+var rgb1=Math.floor(Math.random(255));
 ctx.fillStyle="rgb("+rgb1+",77,44)";
 ctx.fillRect(tx, 300, 222, 100);
-var rgb2=function(){
-Math.random(255);
-};
+rgb2=Math.random(255);
 ctx.fillStyle="rgb("+rgb2+",77,44)";
 ctx.fillRect(tx, 275, 222, 100);
 ctx.clearRect(tx, 300, tx, 100);
@@ -47,6 +44,7 @@ canvas.style.left=Math.floor((www*.55)+(Math.random(250)));
 document.getElementById('disp').style.color="rgb("+rgb1+",77,44)";
 document.getElementById('disp').innerHTML=tx;
 ctx.font = "88px Arial";
+ctx.clearRect(50, 55, 200, 200);
 ctx.fillText(tx, 50, 40);
 },8);
 }};
