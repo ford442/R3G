@@ -8,7 +8,6 @@ let i,tx,tstr,tsti;
 let canvas=document.getElementById('rcanvas');
 let ctx = canvas.getContext('2d');
 setInterval(function(){
-ctx.fillStyle='rgb('+(Math.floor(Math.random(100)*255))+',255,33)';
 document.getElementById('disp').innerHTML="";
 for(i=1;i<8;i++){
 setTimeout(function(){
@@ -23,11 +22,12 @@ llmm=Math.floor(llmm);
 llm=llm/10000;
 llmv=[llm,llmm];
 tx=r3g(i,derp,llmv);
+ctx.fillStyle='rgb('+(Math.floor(Math.random(100)*255))+',255,33)';
 ctx.fillRect(tx, 200, 222, 100);
 ctx.fillRect(100, tx, tx, 100);
 },8);
 document.getElementById('disp').innerHTML=tx;
-}},1000);
+}},250);
 });
 int r3g(int rr,register char ara[8],register float ch[2]){
 int ll=ara[rr]+(rr*10);
