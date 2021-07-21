@@ -17,4 +17,5 @@ Perform functions on arrays using register keyword via Emscripten Webassembly.
 1.  Clone the repository:   git clone
 <br><br>
 
-2.  Set emscripten emsdk_env and make:    make -j22 all
+2.  Set emscripten emsdk_env and make using:    
+    make -j22 all
