@@ -17,7 +17,7 @@ let bz=new BroadcastChannel('bez');
 document.getElementById('btn').addEventListener('click',function(){
 bz.postMessage({data: 222});});
 </script>
-<script async charset="utf-8" src="./r3g3.js"></script>
+<script async charset="utf-8" src="./r3.js"></script>
 <script>
 let hi,wi;
 hi=window.innerHeight;
