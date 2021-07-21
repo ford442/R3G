@@ -4,6 +4,8 @@
 EM_JS(void,ma,(),{
 let r3g=Module.cwrap('r3g','number',['number','array','number']);
 let derp=[];
+let hhh=window.innerHeight;
+let www=window.innerWidth;
 let i,tx,tstr,tsti,c;
 let canvas=document.getElementById('rcanvas');
 let ctx = canvas.getContext('2d');
@@ -31,7 +33,7 @@ document.getElementById('disp').innerHTML=tx;
 },8);
 }};
 ctx.clearRect(0, 0, 700, 700);
-},125);
+},1000);
 });
 int r3g(int rr,register char ara[8],register float ch[2]){
 int ll=ara[rr]+(rr*10);
