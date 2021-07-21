@@ -3,7 +3,7 @@
 #include<emscripten.h>
 EM_JS(void,ma,(),{
 let W=new WebAssembly.Memory({initial:3});
-let wasmbuff=new Uint8ClampedArray(W.buffer,0,64);
+let wasmbuff=new Uint8Array(W.buffer,0,8);
 let r3g=Module.cwrap('r3g','number',['number','array','number']);
 let derp=[1,1,1,1,1,1,1,1];
 let derp2=[5,5,777,22,22,2,2,0];
