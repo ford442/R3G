@@ -14,7 +14,7 @@ for(i=0;i<8;i++){
 derp[1]=(i*10)+100;
 tx=r3g(derp);
 ctx.fillRect(100, r3g(derp), 150, 100);
-}},1);
+}},10);
 });
 int r3g(register char ara[8]){
 return ara[1];
