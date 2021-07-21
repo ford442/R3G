@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<emscripten.h>
 EM_JS(void,ma,(),{
-let r3g=Module.cwrap('r3g','number',['number','array']);
+let r3g=Module.cwrap('r3g','number',['array']);
 let derp=[];
 let i,tx;
 let canvas=document.getElementById('rcanvas');
