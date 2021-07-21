@@ -29,12 +29,12 @@ var tx=r3g(i,derp,llmv);
 var tx3=r3g(i,derp2,llmv);
 const io=300+c;
 var rgb1=function(){
-return Math.floor(Math.random(255));
+Math.floor(Math.random(255));
 };
 ctx.fillStyle="rgb("+rgb1+",77,44)";
 ctx.fillRect(tx, 300, 222, 100);
 var rgb2=function(){
-return Math.random(255);
+Math.random(255);
 };
 ctx.fillStyle="rgb("+rgb2+",77,44)";
 ctx.fillRect(tx, 275, 222, 100);
@@ -46,7 +46,7 @@ canvas.style.top=Math.floor((hhh*.22)+(Math.random(333)));
 canvas.style.left=Math.floor((www*.55)+(Math.random(250)));
 document.getElementById('disp').style.color="rgb("+rgb1+",77,44)";
 document.getElementById('disp').innerHTML=tx;
-ctx.font = "225px Arial";
+ctx.font = "88px Arial";
 ctx.fillText(tx, 50, 40);
 },8);
 }};
