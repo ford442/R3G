@@ -11,7 +11,7 @@ setInterval(function(){
 for(i=0;i<8;i++){
 derp=[i,1,2,3,66,5,6,7];
 tx=r3g(i,derp);
-ctx.fillStyle='rgb('255,255,33)';
+ctx.fillStyle='rgb(255,255,33)';
 ctx.fillRect(100, 200, 222, 100);
 ctx.fillStyle='rgb('+tx+',255,33)';
 ctx.fillRect(100, 200, tx, 100);
