@@ -4,6 +4,7 @@
 EM_JS(void,ma,(),{
 let r3g=Module.cwrap('r3g','number',['number','array','number']);
 let derp=[];
+let derp2=[];
 let hhh=window.innerHeight;
 let www=window.innerWidth;
 let rgb1,i,tstr,tsti,c;
@@ -16,7 +17,7 @@ setTimeout(function(){
 tstr=i*10;
 tsti=i*60;
 derp=[tsti,tstr,tsti,tstr,tsti,tstr,tsti,tstr];
-derp2=[5,5,777,22,22,2,2];
+derp2=[5,5,777,22,22,2,2,0];
 var llm=Math.random(111);
 llm=llm*10000;
 llmm=llm/2;
@@ -25,7 +26,7 @@ llmm=Math.floor(llmm);
 llm=llm/10000;
 llmv=[llm,llmm];
 var tx=r3g(i,derp,llmv);
-var tx3=r3g(c,derp3,llmv);
+var tx3=r3g(i,derp2,llmv);
 const io=300+c;
 rgb1=Math.floor(Math.random(255));
 ctx.fillStyle="rgb("+rgb1+",77,44)";
