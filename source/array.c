@@ -7,7 +7,7 @@ let derp=[];
 let i,tx;
 let canvas=document.getElementById('rcanvas');
 let ctx = canvas.getContext('2d');
-ctx.fillStyle=rgba(0,69,255,1);
+ctx.fillStyle=rgb(0,69,255);
 setInterval(function(){
 derp=[0,1,2,3,4,5,6,7];
 for(i=0;i<8;i++){
