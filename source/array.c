@@ -14,7 +14,7 @@ derp[derp[0]]=derp[0]+1;
 }},1);
 });
 int r3g(register char ara[8]){
-return (ara[0],ara[1],ara[2],ara[3],ara[4],ara[5],ara[6],ara[7];
+return (ara[0],ara[1],ara[2],ara[3],ara[4],ara[5],ara[6],ara[7]);
 }
 int main()
 {
