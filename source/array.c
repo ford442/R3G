@@ -34,7 +34,7 @@ ctx.fillRect(100, (tx*100), tx, 100);
 });
 int r3g(int rr,register int ara[8],register float ch[2]){
 int ll=ara[rr]+(rr*10);
-ata[rr]=ll+ch[1];
+ara[rr]=ll+ch[1];
 return ara[rr];
 }
 int main()
