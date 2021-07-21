@@ -35,7 +35,7 @@ const rgb1=Math.floor(Math.random(255));
 ctx.fillStyle="rgb("+rgb1+",77,44)";
 ctx.fillRect(tx, 275, 222, 100);
 ctx.clearRect(tx, 300, tx, 100);
-ctx.fillStyle='rgb(122,'+derp[4]+',44)';
+ctx.fillStyle="rgb(122,"+(derp[4])+",44)";
 ctx.fillRect(0, tx, tx, 100);
 ctx.clearRect(25, tx, 66, 25);
 canvas.style.top=Math.floor((hhh*.22)+(Math.random(333)));
