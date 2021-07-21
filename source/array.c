@@ -11,12 +11,9 @@ setInterval(function(){
 derp=[0,1,2,3,4,5,6,7];
 for(i=0;i<8;i++){
 derp[1]=(i*10)+100;
-derp[0]=(i*10)+100;
 tx=r3g(derp);
 ctx.fillStyle='rgb('+tx+',255,33)';
 ctx.fillRect(100, 200, tx, 100);
-ctx.fillStyle='rgb(0,'+tx+',255)';
-ctx.fillRect(100, tx, 200, 100);
 }},100);
 });
 int r3g(register char ara[8]){
