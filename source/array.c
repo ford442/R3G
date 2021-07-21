@@ -13,7 +13,7 @@ for(i=0;i<8;i++){
 derp[1]=(i*10)+100;
 derp[0]=(i*10)+100;
 tx=r3g(derp);
-ctx.fillStyle='rgb(0,tx,255)';
+ctx.fillStyle='rgb(0,'+tx+',255)';
 ctx.fillRect(100, tx, 150, 100);
 }},100);
 });
