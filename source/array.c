@@ -14,7 +14,7 @@ var canvas=document.getElementById('rcanvas');
 var ctx = canvas.getContext('2d');
 let rgb1;
 setInterval(function(){
-for(c=0;c<120;c++){
+for(c=0;c<555;c++){
 rgb1=Math.floor(Math.random(255));
 for(i=0;i<8;i++){
 rgb2=Math.random(255);
@@ -36,7 +36,7 @@ var tx=r3g(i,W.buffer,llmv);
 var tx3=r3g(i,derp2,llmv);
 const io=300+c;
 ctx.fillStyle="rgb("+rgb1+",77,44)";
-ctx.fillRect(tx, 300, 222, 100);
+ctx.fillRect(tx, 300, 55, 100);
 ctx.fillStyle="rgb("+rgb2+",77,44)";
 ctx.fillRect(tx, 275, 222, 100);
 ctx.clearRect(tx, 300, tx, 100);
@@ -50,7 +50,7 @@ document.getElementById('disp').innerHTML=tx;
 ctx.font = "88px Arial";
 ctx.clearRect(50, 40, 200, 200);
 ctx.fillText(tx, 50, 40);
-},8);
+},1);
 }};
 ctx.clearRect(0, 0, 700, 700);
 },555);
