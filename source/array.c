@@ -10,7 +10,7 @@ let i,tx,tstr,tsti,c,io,rgb1,rgb2;
 let canvas=document.getElementById('rcanvas');
 let ctx = canvas.getContext('2d');
 setInterval(function(){
-for(c=0;c<60;c++){
+for(c=0;c<120;c++){
 for(i=0;i<8;i++){
 setTimeout(function(){
 tstr=i*10;
@@ -24,11 +24,11 @@ llmm=Math.floor(llmm);
 llm=llm/10000;
 llmv=[llm,llmm];
 tx=r3g(i,derp,llmv);
-io=700-(tx/i);
+io=300+tx;
 rgb1=Math.floor(Math.random(255));
 rgb2=Math.floor(Math.random(255));
 ctx.fillStyle="rgb("+rgb1+",77,44)";
-ctx.fillRect(tx, io, 222, 100);
+ctx.fillRect(tx, 300, 222, 100);
 ctx.fillStyle='rgb(122,'+rgb2+',44)';
 ctx.fillRect(io, tx, tx, 100);
 document.getElementById('disp').innerHTML=tx;
