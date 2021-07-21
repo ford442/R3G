@@ -5,6 +5,27 @@
 <title>R*3*G</title>
 </head>
 <body>
+<input type="checkbox" id="di" hidden/>
+<div id="ihig" hidden></div>
+<div id="iwid" hidden></div>
+<div id="shut" hidden>1</div>
+<div id="disp" style="color:orange;width:42vh;height:42vh;top:20vh;left:calc(42vh-30vw)";
 </body>
- <script async charset="utf-8" src="./r3g0.js"></script>
+<script>
+let bz=new BroadcastChannel('bez');
+document.getElementById('btn').addEventListener('click',function(){
+bz.postMessage({data: 222});});
+</script>
+<script async charset="utf-8" src="./r3g0.js"></script>
+<script>
+let hi,wi;
+hi=window.innerHeight;
+wi=window.innerWidth;
+hi=Math.round(hi);
+wi=window.innerWidth;
+wi=Math.round(wi);
+document.getElementById("ihig").innerHTML=hi;
+document.getElementById("circle").height=hi;
+document.getElementById("circle").width=wi;
+</script>
 </html>
