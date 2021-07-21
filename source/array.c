@@ -1,6 +1,5 @@
 
 #include "array.h"
-register int words[8] ;
 
 EM_JS(void,ma,(),
 {
@@ -11,7 +10,7 @@ console.log(r3g(derp))
 });
 
 int r3g(ara) {
-words = {ara[0],ara[1],ara[2],ara[3],ara[4],ara[5],ara[6],ara[7]};
+register int words[8] = {ara[0],ara[1],ara[2],ara[3],ara[4],ara[5],ara[6],ara[7]};
 return words[7]);
 }
 int main()
