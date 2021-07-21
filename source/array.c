@@ -30,7 +30,7 @@ ctx.fillRect(100, tx, tx, 100);
 document.getElementById('disp').style.top=Math.floor((hhh*.2222)+(Math.random(25)));
 document.getElementById('disp').style.left=Math.floor((www*.2222)-(Math.random(25)));
 document.getElementById('disp').innerHTML=tx;
-},8);
+},16);
 }};
 ctx.clearRect(0, 0, 700, 700);
 },1000);
