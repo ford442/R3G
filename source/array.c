@@ -6,7 +6,7 @@ let r3g=Module.cwrap('r3g','number',['number','array','number']);
 let derp=[];
 let hhh=window.innerHeight;
 let www=window.innerWidth;
-let i,tx,tstr,tsti,c,io,rgb1,rgb2;
+var i,tx,tstr,tsti,c,io,rgb1,rgb2;
 let canvas=document.getElementById('rcanvas');
 let ctx = canvas.getContext('2d');
 setInterval(function(){
