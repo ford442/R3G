@@ -2,13 +2,13 @@
 #include<stdlib.h>
 #include<emscripten.h>
 EM_JS(void,ma,(),{
-let r3g=Module.cwrap('r3g','number',['number','array','number']);
-let derp=[];
-let hhh=window.innerHeight;
-let www=window.innerWidth;
-let i,tstr,tsti,c;
-let canvas=document.getElementById('rcanvas');
-let ctx = canvas.getContext('2d');
+var r3g=Module.cwrap('r3g','number',['number','array','number']);
+var derp=[];
+var hhh=window.innerHeight;
+var www=window.innerWidth;
+var i,tstr,tsti,c;
+var canvas=document.getElementById('rcanvas');
+var ctx = canvas.getContext('2d');
 setInterval(function(){
 for(c=0;c<120;c++){
 for(i=0;i<8;i++){
