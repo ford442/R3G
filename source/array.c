@@ -8,13 +8,13 @@ let i,tx;
 setInterval(function(){
 derp=[0,1,2,3,4,5,6,7];
 for(i=0;i<8;i++){
-derp[i]=i+100;
+derp[1]=i+100;
 tx=r3g(derp);
 document.getElementById('disp').innerHTML=tx;
 }},1);
 });
 int r3g(register char ara[8]){
-return ara[1,2,3,4];
+return ara[1];
 }
 int main()
 {
