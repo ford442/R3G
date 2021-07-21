@@ -1,6 +1,8 @@
-#include "array.h"
-EM_JS(void,ma,(),
-{
+#include <stdio.h>
+#include <stdlib.h>
+#include <emscripten.h>
+
+EM_JS(void,ma,(),{
 let r3g=Module.cwrap('r3g','array',['array']);
 let derp=[];
 derp = [0,1,2,3,4,5,6,7];
